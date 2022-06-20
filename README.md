@@ -6,7 +6,7 @@
 
 Step1: Register yourself in our website
 
-[Hack2skill Website](https://hack2skill.com/hack/goc2) 
+[Hack2skill Website](https://hack2skill.com/hack/goc3) 
 
 Step2: Join our discord server
 
