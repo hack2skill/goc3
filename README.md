@@ -10,7 +10,7 @@
 
 #### Step2: Join our discord server
 
-[Hack2skill Discord Server](https://bit.ly/H2S-Discord)
+[Hack2skill Discord Server](https://discord.gg/2acmdTsKeR)
 
 #### Step3: Follow our github organization
 
@@ -58,6 +58,11 @@ Applying GUI - eg. Browser using Django/Flask or Tkinter (10 points ) <br />
 #### Step6: Be active in our discord server
 
 #### Step7: Compete with others by making a PR in our repository
+Step 7.1: Fork the main repository <br/>
+Step 7.2: Delete the problem statement folders you are not working on <br/>
+Step 7.3: Upload the video of its working in the main folder and files in the problem statement folder <br/>
+Step 7.4: Send pull request to the repository <br/>
+***
 
 #### Step8: Give your Feedbacks
 
