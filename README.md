@@ -55,10 +55,10 @@ Applying GUI - eg. Browser using Django/Flask or Tkinter (10 points ) <br />
 ***
 
 
-Step6: Be active in our discord server
+#### Step6: Be active in our discord server
 
-Step7: Compete with others by making a PR in our repository
+#### Step7: Compete with others by making a PR in our repository
 
-Step8: Give your Feedbacks
+#### Step8: Give your Feedbacks
 
-Step9: Stay Connected
+#### Step9: Stay Connected
