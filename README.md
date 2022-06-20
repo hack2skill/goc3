@@ -30,12 +30,8 @@
 7. All submissions will run through a plagiarism detector before deciding the winners.Any case of code plagiarism will disqualify both users from the contest & their scores would be set to null for the particular contest.
 8. The decisions of the panel will be final and binding in all forms.
 
-#### Step5: Read the Score Criteria and submission method:
+#### Step5: Read the Score Criteria :
 
-## Project Submission:
-
-Participants have to make a video (screen recording) of the workings of their project.
-They need to upload the project code to the Github.
 
 ### Important Note:
 
@@ -57,13 +53,14 @@ Applying GUI - eg. Browser using Django/Flask or Tkinter (10 points ) <br />
 
 #### Step6: Be active in our discord server
 
+# Project Submission:
 #### Step7: Compete with others by making a PR in our repository
+
+Participants have to make a video (screen recording) of the workings of their project.
+
+They need to upload the project code to the Github. <br />
 Step 7.1: Fork the main repository <br/>
 Step 7.2: Delete the problem statement folders you are not working on <br/>
 Step 7.3: Upload the video of its working in the main folder and files in the problem statement folder <br/>
 Step 7.4: Send pull request to the repository <br/>
 ***
-
-#### Step8: Give your Feedbacks
-
-#### Step9: Stay Connected
