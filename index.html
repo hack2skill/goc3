@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+        <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+        <title>Pyscript Demo</title>
+        <py-env>
+            - numpy 
+            - paths:
+                - ./utils.py
+        </py-env>
+    </head>
+    <body>
+        <main class="container h-screen flex flex-col items-center justify-center">
+            <div id="output" class="text-3xl"></div>
+            <button id="shuffle" class="mt-4 p-2 text-white bg-blue-600 rounded" pys-onClick="shuffle_array">Shuffle</button>
+        </main>
+
+        <py-script src="./main.py"></py-script>
+
+        <!-- <py-repl></py-repl> -->
+    </body>
+</html>
