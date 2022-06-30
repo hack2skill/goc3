@@ -10,11 +10,11 @@ pyscript.write('date', f"{date}")
 
 
 # add classes on load
-btn_yellow = 'bg-yellow-100 shadow-md rounded-2xl w-12 h-12 text-yellow-600 font-medium flex justify-center items-center'
-btn_orange = 'bg-yellow-500 shadow-md rounded-2xl w-12 h-12 text-white font-medium text-xl flex justify-center items-center'
-btn_grey = 'bg-gray-200 shadow-md rounded-2xl w-12 h-12 text-black font-medium flex justify-center items-center'
-btn_green = 'bg-green-500 shadow-md rounded-2xl w-12 h-12 text-white font-medium text-xl flex justify-center items-center'
-btn_grey_jumbo = 'bg-gray-200 shadow-md rounded-2xl w-full h-12 text-black font-medium flex justify-center items-center'
+btn_yellow = 'bg-yellow-100 shadow-md rounded-2xl w-12 h-12 text-yellow-600 font-medium flex justify-center items-center cursor-pointer'
+btn_orange = 'bg-yellow-500 shadow-md rounded-2xl w-12 h-12 text-white font-medium text-xl flex justify-center items-center cursor-pointer'
+btn_grey = 'bg-gray-200 shadow-md rounded-2xl w-12 h-12 text-black font-medium flex justify-center items-center cursor-pointer'
+btn_green = 'bg-green-500 shadow-md rounded-2xl w-12 h-12 text-white font-medium text-xl flex justify-center items- cursor-pointer'
+btn_grey_jumbo = 'bg-gray-200 shadow-md rounded-2xl w-full h-12 text-black font-medium flex justify-center items-center cursor-pointer'
 
 btn_yellow_el = document.getElementsByClassName('btn-yellow')
 btn_orange_el = document.getElementsByClassName('btn-orange')
