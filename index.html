@@ -31,65 +31,65 @@
           </div>
 
           <div class="w-auto m-3 h-28 text-right space-y-2 py-2">
-              <div class="text-gray-700">{number}</div>
+              <!-- <div class="text-gray-700">{number}</div> -->
               <div class="text-black font-bold text-3xl">{sum}</div>
           </div>
+          
+          
           <div class="w-auto m-1 h-auto mb-2">
               
               <div class="m-2 flex justify-between">
-                  <div class="btn-grey">%</div>
-                  <div class="btn-yellow">AC</div>
-                  <div class="btn-yellow">C</div>
-                  <div class="btn-grey">
+                  <div class="btn-grey" pys-onClick="display('%')">%</div>
+                  <div class="btn-yellow" pys-onClick="clr()">AC</div>
+                  <div class="btn-yellow" pys-onClick="clr()">C</div>
+                  <div class="btn-grey" pys-onClick="del()">
                       <i class="fas fa-backspace"></i>
                   </div>
                 </div>
                 <div class="m-2 flex justify-between">
-                <div class="btn-grey"></div>
-                <div class="btn-grey">(</div>
-                <div class="btn-grey">)</div>
-                  <div class="btn-orange">
+                <div class="btn-grey">
+                  <i class="fa-solid fa-square-root-variable"></i>
+                </div>
+                <div class="btn-grey" pys-onClick="display('(')">(</div>
+                <div class="btn-grey" pys-onClick="display(')')">)</div>
+                  <div class="btn-orange" pys-onClick="display('/')">
                     <i class="fas fa-divide"></i>
                   </div>
               </div>
               <div class="m-2 flex justify-between">
-                  <div class="btn-grey">7</div>
-                  <div class="btn-grey">8</div>
-                  <div class="btn-grey">9</div>
-                  <div class="btn-orange">
-
-                    <!-- <i class="fa fa-xmark"></i> -->
+                  <div class="btn-grey" pys-onClick="display('7')">7</div>
+                  <div class="btn-grey" pys-onClick="display('8')">8</div>
+                  <div class="btn-grey" pys-onClick="display('9')">9</div>
+                  <div class="btn-orange" pys-onClick="display('*')">
                     <i class='fa-solid fa-xmark'></i>
-
-                    
                   </div>
               </div>
               <div class="m-2 flex justify-between">
-                  <div class="btn-grey">4</div>
-                  <div class="btn-grey">5</div>
-                  <div class="btn-grey">6</div>
-                  <div class="btn-orange">
+                  <div class="btn-grey" pys-onClick="display('4')">4</div>
+                  <div class="btn-grey" pys-onClick="display('5')">5</div>
+                  <div class="btn-grey" pys-onClick="display('6')">6</div>
+                  <div class="btn-orange" pys-onClick="display('-')">
                     <i class="fas fa-minus"></i>
-
                   </div>
               </div>
               <div class="m-2 flex justify-between">
-                  <div class="btn-grey">1</div>
-                  <div class="btn-grey">2</div>
-                  <div class="btn-grey">3</div>
-                  <div class="btn-orange">
+                  <div class="btn-grey" pys-onClick="display('1')">1</div>
+                  <div class="btn-grey" pys-onClick="display('2')">2</div>
+                  <div class="btn-grey" pys-onClick="display('3')">3</div>
+                  <div class="btn-orange" pys-onClick="display('+')">
                     <i class="fas fa-plus"></i>
                   </div>
               </div>
               <div class="m-2 flex justify-between">
-                  <div class="btn-grey-jumbo">0</div>
+                  <div class="btn-grey-jumbo" pys-onClick="display('0')">
+                    0<i class="fa-solid fa-square-0"></i>
+                  </div>
                   <div class="flex w-full ml-3 justify-between">
-                      <div class="btn-grey">.
+                      <div class="btn-grey" pys-onClick="display('.')">.
                         <i class="fas fa-period"></i>
                       </div>
-                      <div class="btn-green">
+                      <div class="btn-green" pys-onClick="calc()">
                         <i class="fas fa-equals"></i>
-
                       </div>
                   </div>
               </div>
