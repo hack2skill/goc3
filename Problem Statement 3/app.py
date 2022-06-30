@@ -3,13 +3,15 @@ import tkinter as tk
 import math
 from tkinter import *
 
-#Tkinter window setting with dimentions as 569x650
+#Tkinter window setting with dimentions as 600*700
 window = Tk()
-window.geometry("600x700")
+window.geometry("650x700")
 window.title("PyCalc")
 icon = PhotoImage(file = "./calculator.png")
-window.iconphoto(False, icon)
-tk.Label(window, text="Python GUI Calculator with History", font=('Roboto'), pady = 10).pack()
+window.iconphoto(True, icon)
+tk.Label(window, text="Python GUI Calculator with History", font=('Sans 18'), pady = 10).pack()
+tk.Label(window, text="github.com/atombalan", font=('Sans 10'), pady = 5).pack()
+
 
 #setting scrollbar for smooth UI
 scrollbar = Scrollbar(window)
@@ -92,7 +94,7 @@ equals = Button(buttonsFrame, text = "=", fg = "white", width = 10, height = 3, 
 plus = Button(buttonsFrame, text = "+", fg = "black", width = 10, height = 3, bd = 0, bg = "#dadce0", cursor = "hand2", command = lambda: butttonClicked("+")).grid(row = 4, column = 5, padx = 3, pady = 3)
 
 
-tk.Label(window, text="History:", font=('Roboto'), pady = 10).pack()
+tk.Label(window, text="History:", font=('Sans'), pady = 10).pack()
 
 #HISTORY DISPLAY
 history.pack()
