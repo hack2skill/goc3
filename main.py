@@ -8,41 +8,68 @@ from utils import add_class, now, add_classes
 date = now()
 pyscript.write('date', f"{date}")
 
-# setting C to clear LCD 
 
+output_el = Element('output').element
+
+
+# setting C to clear LCD
 def clear():
-    document.getElementById('out').innerText = '';
+    # document.getElementById('output').innerText = '';
+    output_el.innerText = '';
+    # output_el.clear()
+    # Element('output').clear()
 
 
 # Del functionality
 def delete():
-    document.getElementById('output').innerText = document.getElementById('output').innerText.slice(0, -1)
+    # document.getElementById('output').innerText = document.getElementById('output').innerText.slice(0, -1)
+    output_el.innerText = output_el.innerText[:-1]
 
-# Making button works 
+# Making button works
+
+
 def display(n):
-    document.getElementById('output').innerText += n
+    # document.getElementById('output').innerText += n
+    output_el.innerText += n
 
 
-#  making the calculaton 
+#  making the calculaton
 def calc():
     try:
-        document.getElementById('output').innerText = eval(document.getElementById('output').innerText)
-    except: 
-        document.getElementById('output').innerText = 'XXXXXXXXXXXXXXXXXXXXX!'
+        # document.getElementById('output').innerText = eval(document.getElementById('output').innerText)
+        output_el.innerText = eval(output_el.innerText)
+    except:
+        # document.getElementById('output').innerText = 'XXXXXXXXXXXXXXXXXXXXX!'
+        output_el.innerText = 'XXXXXXXXXXXXXXXX!'
+
+
+# def key(e):
+#     global keynum
+#     if (window.event):
+#         keynum = e.keyCode
+#     elif (e.which):
+#         keynum = e.which
+
+#     console.log(String.fromCharCode(keynum))
+#     display(String.fromCharCode(keynum))
 
 
 #  Enable Keyboard Input
 def key(e):
-    global keynum;
-    if (window.event):
-        keynum = e.keyCode;
+    if e.key == "Enter":
+         calc()
     elif (e.which):
-        keynum = e.which;
+        keynum = e.which
+        console.log(ord(keynum))
+        display(ord(keynum))
 
-    console.log(String.fromCharCode(keynum));
-    display(String.fromCharCode(keynum));
+output_el.onkeypress = key
 
-document.addEventListener("keydown", key, False);
+output_el.onclick = calc()
+
+
+
+document.addEventListener("keydown", key, False)
 
 
 # add classes on load
