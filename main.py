@@ -1,5 +1,5 @@
-import numpy as np
-import random
+# import numpy as np
+# import random
 
 from utils import add_class, now, add_classes
 
@@ -7,6 +7,42 @@ from utils import add_class, now, add_classes
 # insert date
 date = now()
 pyscript.write('date', f"{date}")
+
+# setting C to clear LCD 
+
+def clear():
+    document.getElementById('out').innerText = '';
+
+
+# Del functionality
+def delete():
+    document.getElementById('output').innerText = document.getElementById('output').innerText.slice(0, -1)
+
+# Making button works 
+def display(n):
+    document.getElementById('output').innerText += n
+
+
+#  making the calculaton 
+def calc():
+    try:
+        document.getElementById('output').innerText = eval(document.getElementById('output').innerText)
+    except: 
+        document.getElementById('output').innerText = 'XXXXXXXXXXXXXXXXXXXXX!'
+
+
+#  Enable Keyboard Input
+def key(e):
+    global keynum;
+    if (window.event):
+        keynum = e.keyCode;
+    elif (e.which):
+        keynum = e.which;
+
+    console.log(String.fromCharCode(keynum));
+    display(String.fromCharCode(keynum));
+
+document.addEventListener("keydown", key, False);
 
 
 # add classes on load
