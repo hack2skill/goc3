@@ -1,0 +1,207 @@
+import random
+import time
+import pyautogui
+import pyttsx3
+import speech_recognition as sr
+import wikipedia
+import webbrowser
+import datetime
+import email
+import os
+import smtplib
+import cv2
+import random
+from requests import get
+import pywhatkit as kit
+import sys
+
+engine = pyttsx3.init('sapi5')
+voices = engine.getProperty('voices')
+
+#print(voices[0].id)
+engine.setProperty('voice', voices[0].id)
+
+
+def speak(audio):
+    engine.say(audio)
+    engine.runAndWait()
+
+
+def acknowledge():
+    hour = int(datetime.datetime.now().hour)
+    if hour >= 0 and hour < 12:
+        speak("Good morning Majesty!")
+
+    elif hour >= 12 and hour < 18:
+        speak("Good afternoon Majesty!")
+
+    else:
+        speak("Good evening Majesty!")
+
+    speak("I am your jinny . please tell me what can I do for you?")
+
+
+def takecommand():
+    r = sr.Recognizer()
+    with sr.Microphone() as source:
+        print("I am listening...")
+        r.pause_threshold = 1
+        audio = r.listen(source)
+
+    try:
+        print("Recognizing...")
+        query = r.recognize_google(audio, language='en-in')
+        print(f"Your order: {query}\n")
+
+    except Exception:
+        print("Pardon please")
+        return "None"
+    return query
+
+
+def sendEmail(to,content):
+    server = smtplib.SMTP('smtp.gmail.com', 587)
+    server.ehlo()
+    server.starttls()
+    server.login('email@gmail.com', 'your-paswword-here')
+    server.sendmail('email@gmail.com', to, content)
+    server.close()
+
+def news():
+    main_url='http://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=af609e1705334967b3dac3b71c322175'
+    main_page=requests.get(main_url).json()
+    article=main_page['article']
+    new=[]
+    day=["first","second","third","fourth","fifth","sixth","seventh","eighth","ninth","tenth"]
+    for x in article:
+        new.append(x["title"])
+    for j in range(len(new)):
+        speak(f"today's {day[j]} news is: {new[i]}")
+
+
+
+if __name__ == "__main__":
+    acknowledge()
+    if 1:
+        query = takecommand().lower()
+
+        #for searching something in wikipedia
+        if 'wikipedia' in query:
+            speak('Searching Wikipedia...')
+            query = query.replace("wikipedia", "")
+            results = wikipedia.summary(query, sentences=2)
+            speak("According to wikipedia")
+            speak(results)
+
+        #to open YouTube
+        elif 'open youtube' in query:
+            webbrowser.open("youtube.com")
+
+        #to play music
+        elif 'play music' in query:
+            music_dir="D:\\Music"
+            songs=os.listdir(music_dir)
+            #rd=random.choice(songs)
+            for i in songs:
+                if i.endswith('.mp3'):
+                    os.startfile(os.path.join(music_dir,i))
+
+       # elif 'ip address' in query:
+        #    ip=get('https://api.ipify.org').text
+         #   speak(f"your Ip Address is {ip}")
+
+        elif 'my location' in query :
+            speak('yes Majesty!,Let me check')
+            try:
+                ipAdd=requests.get('https://api.ipify.org').text
+                print(ipAdd)
+                url='https://get.geojs.io/v1/ip/geo/'+ipadd+'.json'
+                geo_requests=requests.get(url)
+                geo_data=geo_requests.json()
+                city=geo_data['city']
+                country=geo_data['country']
+                speak(f"Majesty I think we are in city {city} in country {country} ")
+            except Exception as e:
+                speak("Sorry Majesty! Due to some issues I'm not able to find where we are.")
+                pass
+
+        #opening google
+        elif 'open google' in query:
+            webbrowser.open("google.com")
+
+        #sending message on whatsapp
+        elif 'send message on whatsapp' in query:
+            kit.sendwhatmsg("+9399619102","hi! what u doin?",2,25)
+
+        #opening stackoverflow website
+        elif 'open stackoverflow' in query:
+            webbrowser.open("stackoverflow.com")
+
+
+        # opening youtubemusic website
+        elif 'open YouTubeMusic' in query:
+            webbrowser.open("YouTubeMusic.com")
+
+        # opening command prompt
+        elif 'open commmand propmt' in query:
+            os.system("start cmd")
+
+        #opening camera
+        elif 'open camera' in query:
+            cap=cv2.VideoCapture(0)
+            while True:
+                ret,img=cap.read()
+                cv2.imshow('webcam',img)
+                k=cv2.waitKey(50)
+                if k==27:
+                    break
+            cap.release()
+            cv2.destroyAllWindows()
+
+
+        elif 'switch the windows' in query:
+            pyautogui.keyDown('alt')
+            pyautogui.press('tab')
+            time.sleep(1)
+            pyautogui.keyUp('alt')
+
+        elif 'todays news' in query:
+            speak("Yes Majesty!,Fetching the latest news")
+            news()
+
+        elif 'the time' in query:
+            strTime = datetime.datetime.now().strftime("%H:%M:%S")
+            speak(f"Majesty, the time is{strTime}")
+
+
+        elif 'email to amit' in query:
+            try:
+                speak("What should I say?")
+                content = takecommand()
+                to = "email@gmail.com"
+                sendEmail(to, content)
+                speak("Email has been sent!")
+            except Exception as e:
+                print(e)
+                speak("Sorry Majesty I am unable to send this email")
+
+        elif 'no thanks' in query:
+            speak("I'm happy to help you majesty,have a good day ahead")
+            sys.exit()
+
+        elif 'take screenshot' in query:
+            speak("Majesty!,would should I name this screenshot?")
+            name=takecommand().lower()
+            speak("Please Majesty!,hold the screen for the few seconds,I'm taking a screenshot")
+            time.sleep(3)
+            img=pyautogui.screenshot()
+            img.save(f"{name}.png")
+            speak("I am done Majesty!,It is saved in our main folder")
+
+        else:
+            pass
+
+
+        #speak("Majesty!,do you have any other orders?")
+
+
