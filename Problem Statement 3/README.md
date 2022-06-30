@@ -1,10 +1,16 @@
-# Problem Statement-3.
+# Problem statement 3
+
+## CALCULATOR WITH GUI in Python
+
+## Introduction  
+This project , performs basic mathematical operations.
+
+## Tech stack 
+
+The project is made using python.
 
 
-***
-### Make a calculator with GUI
+## made my Srinjoy Pati
 
 
-
-***
 
