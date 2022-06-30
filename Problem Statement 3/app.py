@@ -1,3 +1,5 @@
+#github.com/atombalan
+
 #importing necessary modules
 import tkinter as tk
 import math
@@ -104,4 +106,4 @@ window.mainloop()
 
 
 
-
+#github.com/atombalan
