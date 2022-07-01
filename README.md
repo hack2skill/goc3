@@ -1,6 +1,6 @@
 # GAME OF CODES
 
-
+WORKTHROUGH OF VIDEO LINK: https://www.loom.com/share/2e8c6c93a70f476786af0cc3a7195b39
 
 # How to Register in GAME OF CODES
 
