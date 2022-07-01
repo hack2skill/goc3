@@ -1,10 +1,1 @@
-# Problem Statement-3.
-
-
-***
-### Make a calculator with GUI
-
-
-
-***
-
+# calcalutor in python for GOC Hack2skill
