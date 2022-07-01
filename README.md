@@ -1,66 +1,23 @@
-# GAME OF CODES
+# Wave - Desktop Assistant
 
+A context-aware GUI desktop assistant named as "Ruby" using python and python-tkinter
 
+# Prerequisites
 
-# How to Register in GAME OF CODES
+You must have SpeechRecognition, gTTS, playsound and wikipedia installed.
 
-#### Step1: Register yourself in our website
+Install requirements using : pip install -r requirements.txt
 
-[Hack2skill Website](https://hack2skill.com/hack/goc3) 
+#Running the project
+Ensure that you are in the project home directory. Start the Desktop assistant by running below command -
 
-#### Step2: Join our discord server
+``python main.py ``
 
-[Hack2skill Discord Server](https://discord.gg/2acmdTsKeR)
+If everything goes well, you should be able to see the tkinter window as below.
+![Screenshot](screenshot.png)
 
-#### Step3: Follow our github organization
+#Watch Demo
+<a href="https://drive.google.com/file/d/1We0Vewrr5_2l_ZDmaRVIczoRBdX0gjCg/view?usp=sharing" target="_blank">Watch Wave - Desktop Assistant</a>
+Click the start button to initiate interaction and there you go.
 
-[Hack2skill GitHub Organization](https://github.com/hack2skill)
-
-#### Step4: Read the guidelines
-***
-
-## Guidelines for the participants:
-
-1. Participant should register for the competition in our website.
-2. Should join our discord server.
-3. Participants can participate individually only.
-4. Please refrain from discussing strategy during the contest.
-5. Do not share your code during the contest.
-6. Plagiarism of any means will lead to disqualification.
-7. All submissions will run through a plagiarism detector before deciding the winners.Any case of code plagiarism will disqualify both users from the contest & their scores would be set to null for the particular contest.
-8. The decisions of the panel will be final and binding in all forms.
-
-#### Step5: Read the Score Criteria :
-
-
-### Important Note:
-
-Primary Shortlisting would be based on the video, hence try to make the video of good quality.
-
-## Score Criteria:
-
-Scores are given out of 100 based on :
-
-Creativity of the Project (10 points) <br />
-Unique Selling Point (10 points) <br />
-Solving the Problem Statement (10 points) <br />
-Presentation Skills - eg. Video (10 points) <br />
-Applying GUI - eg. Browser using Django/Flask or Tkinter (10 points ) <br />
-
-
-***
-
-
-#### Step6: Be active in our discord server
-
-# Project Submission:
-#### Step7: Compete with others by making a PR in our repository
-
-Participants have to make a video (screen recording) of the workings of their project.
-
-They need to upload the project code to the Github. <br />
-Step 7.1: Fork the main repository <br/>
-Step 7.2: Delete the problem statement folders you are not working on <br/>
-Step 7.3: Upload the video of its working in the main folder and files in the problem statement folder <br/>
-Step 7.4: Send pull request to the repository <br/>
-***
+Note : Also remember to have a fast and secured internet connection to make this run. Because it is using google speech recognition api to understand the commands.

@@ -1,0 +1,10 @@
+WIKIPEDIA_URL='https://en.wikipedia.org/wiki/'
+STACKOVERFLOW_URL = 'stackoverflow.com'
+GOOGLE_SEARCH_URL='https://google.com/search?q='
+YOUTUBE_URL='https://www.youtube.com/'
+GOOGLE_URL='https://www.google.com/'
+GMAIL_URL='https://mail.google.com/'
+GOOGLE_MAP_URL='https://google.nl/maps/place/'
+JOKE_URL="https://sv443.net/jokeapi/v2/joke/Programming,Miscellaneous,Pun?blacklistFlags=nsfw,religious,political,racist,sexist"
+COVID_URL='https://api.covid19api.com/country/india/status/confirmed/live'
+NEWS_URL='http://newsapi.org/v2/top-headlines?sources=the-times-of-india&apiKey=ae5ccbe2006a4debbe6424d7e4b569ec'
