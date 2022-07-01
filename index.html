@@ -30,7 +30,6 @@
           <i class="fas fa-battery-three-quarters text-sm"></i>
         </div>
       </div>
-
       <div class="w-auto m-3 h-28 text-right space-y-2 py-2">
         <!-- <div class="text-gray-700">{number}</div> -->
         <div class="text-gray-700"></div>
@@ -42,64 +41,66 @@
       <div class="w-auto m-1 h-auto mb-2">
 
         <div class="m-2 flex justify-between">
-          <div  id="percent" class="btn-grey" pys-onClick="display('%')">%</div>
-          <div  id="C1" class="btn-yellow" pys-onClick="clear()">AC</div>
-          <div  id="C2" class="btn-yellow" pys-onClick="clear()">C</div>
-          <div  id="D" class="btn-grey" pys-onClick="delete()">
+          <div  id="percent" class="btn-grey" pys-onClick="display1" value='%'>%</div>
+          <div  id="AC" class="btn-yellow" pys-onClick="clear">AC</div>
+          <div  id="C" class="btn-yellow" pys-onClick="clear">C</div>
+          <div  id="D" class="btn-grey" pys-onClick="delete">
             <i class="fas fa-backspace"></i>
           </div>
         </div>
 
         <div class="m-2 flex justify-between">
-          <div class="btn-grey">
+          <div id="square" class="btn-grey" pys-onClick="display">
+          <!-- <div class="btn-grey"> -->
             <i class="fa-solid fa-square-root-variable"></i>
           </div>
-          <div  id="openQ" class="btn-grey" pys-onClick="display('(')">(</div>
-          <div  id="closedQ" class="btn-grey" pys-onClick="display(')')">)</div>
-          <div  id="slash" class="btn-orange" pys-onClick="display('/')">
+          <div  id="openQ" class="btn-grey" pys-onClick="display2" value='('>(</div>
+          <div  id="closedQ" class="btn-grey" pys-onClick="display3" value=')'>)</div>
+          <div  id="slash" class="btn-orange" pys-onClick="display4" value='/'>
             <i class="fas fa-divide"></i>
           </div>
         </div>
 
         <div class="m-2 flex justify-between">
-          <div  id="seven" class="btn-grey" pys-onClick="display('7')">7</div>
-          <div  id="eight" class="btn-grey" pys-onClick="display('8')">8</div>
-          <div  id="nine" class="btn-grey" pys-onClick="display('9')">9</div>
-          <div  id="star" class="btn-orange" pys-onClick="display('*')">
+          <div  id="seven" class="btn-grey" pys-onClick="display5" value='7'>7</div>
+          <div  id="eight" class="btn-grey" pys-onClick="display6" value='8'>8</div>
+          <div  id="nine" class="btn-grey" pys-onClick="display7" value='9'>9</div>
+          <div  id="star" class="btn-orange" pys-onClick="display8" value='*'>
             <i class='fa-solid fa-xmark'></i>
           </div>
         </div>
 
         <div class="m-2 flex justify-between">
-          <div  id="four" class="btn-grey" pys-onClick="display('4')">4</div>
-          <div  id="five" class="btn-grey" pys-onClick="display('5')">5</div>
-          <div  id="six" class="btn-grey" pys-onClick="display('6')">6</div>
-          <div  id="minus" class="btn-orange" pys-onClick="display('-')">
+          <div  id="four" class="btn-grey" pys-onClick="display9" value='4'>4</div>
+          <div  id="five" class="btn-grey" pys-onClick="display10" value='5'>5</div>
+          <div  id="six" class="btn-grey" pys-onClick="display11" value='6'>6</div>
+          <div  id="minus" class="btn-orange" pys-onClick="display12" value='-'>
             <i class="fas fa-minus"></i>
           </div>
         </div>
 
         <div class="m-2 flex justify-between">
-          <div  id="one" class="btn-grey" pys-onClick="display('1')">1</div>
-          <div  id="two" class="btn-grey" pys-onClick="display('2')">2</div>
-          <div  id="three" class="btn-grey" pys-onClick="display('3')">3</div>
-          <div  id="plus" class="btn-orange" pys-onClick="display('+')">
+          <div  id="one" class="btn-grey" pys-onClick="display13" value='1'>1</div>
+          <div  id="two" class="btn-grey" pys-onClick="display14" value='2'>2</div>
+          <div  id="three" class="btn-grey" pys-onClick="display15" value='3'>3</div>
+          <div  id="plus" class="btn-orange" pys-onClick="display16" value='+'>
             <i class="fas fa-plus"></i>
           </div>
         </div>
 
         <div class="m-2 flex justify-between">
-          <div  id="zero" class="btn-grey-jumbo" pys-onClick="display('0')">
+          <div  id="zero" class="btn-grey-jumbo" pys-onClick="display17" value='0'>
             0<i class="fa-solid fa-square-0"></i>
           </div>
-          <div class="flex w-full ml-3 justify-between">
-            <div  id="dot" class="btn-grey" pys-onClick="display('.')">.
+          <div class="flex w-full ml-3 justify-between justify-center">
+            <div  id="dot" class="btn-grey" pys-onClick="display18" value='.'>.
               <i class="fas fa-period"></i>
             </div>
-            <div  id="calc" class="btn-green" pys-onClick="calc()">
+            <div  id="calc" class="btn-green" pys-onClick="calc" value='='>
               <i class="fas fa-equals"></i>
             </div>
           </div>
+          
         </div>
 
         <div class="flex justify-center mt-5">
