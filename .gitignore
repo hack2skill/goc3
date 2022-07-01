@@ -1,0 +1,4 @@
+*.mov
+*.idea/
+*.DS_Store
+_pycache__/q
